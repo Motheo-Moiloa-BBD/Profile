@@ -7,8 +7,8 @@ html{
 
 body{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 30px;
     scroll-behavior: smooth;
 }
 
@@ -44,7 +44,7 @@ nav{
 }
 
 .about{
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
 }
 
@@ -87,16 +87,21 @@ nav{
     font-weight: 300;
 }
 
+.email_icon{
+    width: 45px;
+    height: 45px;
+}
+
 .description{
     flex:2
 }
 
 .about_me_content{
     font-size: 20px;
+    text-align: justify;
 }
 
-.graduation_cap_icon, .laptop_icon
-{
+.graduation_cap_icon, .laptop_icon{
     font-size: 25px;
 }
 
@@ -114,12 +119,140 @@ nav{
 
 #skills{
     display: flex;
-    align-items:flex-start;
+    font-size: 16px;
+}
+
+#skills h2{
+    font-size: 1.35rem;
 }
 
 .programming_skills, .interpersonal_skills, .language_skills{
-    flex: 1;
+    flex: 2;
 }
+
+.form_holder{
+    box-sizing: border-box;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 100px;
+    background-color: #f2f2f2;
+}
+
+form{
+    margin-top: 25px;
+    margin-left: -25px;
+}
+
+textarea{
+    height: 150px;
+}
+
+input[type=text], textarea{
+    width: 100%;
+    padding: 10px;
+    border:1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: vertical;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #666;
+}
+
+input[type=submit]{
+    background-color: #33b38d;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #666;
+}
+
+input[type=submit]:hover{
+    background-color: lightgreen;
+}
+
+label{
+    font-size: 15px;
+}
+
+.form_holder h2{
+    font-size: 30px;
+    text-align: center;
+    margin-top: -70px;
+}
+
+
+/* Tablets and Phones */
+
+@media screen and (max-width: 768px) {
+    header a{
+        margin-left: 2px;
+        font-size: 13px;
+    }
+
+    nav{
+        margin-left: 10px;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about p{
+        text-align: center;
+    }
+
+    .circular_image{
+        height:10rem;
+        width :10rem;
+        text-align: center;
+    }
+
+    .name_title{
+        text-align: center;
+        margin-top: -0.5rem;
+    }
+
+    .about_me_content{
+        padding: 1rem 1rem;
+        font-size: 16px;
+    }
+
+    #education h2, #experience h2{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .graduation_cap_icon, .laptop_icon{
+        font-size: 15px;
+    }
+
+    .qualification, .job{
+        font-size: 12px;
+    }
+
+    .institution{
+        margin-left: 25px;
+        margin-top: -15px;
+        font-size: 17px;
+    }
+
+    #skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .programming_skills h2, .interpersonal_skills h2, .language_skills h2{
+        font-size: 1.4rem;
+    }
+
+    .form_holder h2{
+        font-size: 20px;
+        margin-top: -70px;
+    }
+}
+
 
 
 
