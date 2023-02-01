@@ -1,22 +1,29 @@
+/* Variables */
+
+:root{
+    --primary-colour: #33b38d;
+}
+
 html{
     font-family: Roboto,sans-serif;
-    font-size: 16px;
+    font-size: 1.1em;
     color: rgba(0,0,0,.8);
     line-height: 1.65;
 }
 
 body{
     box-sizing: border-box;
-    margin: 0px;
-    padding: 30px;
+    margin: 0;
+    padding: 4em;
     scroll-behavior: smooth;
 }
 
 header{
     width: 100%;
-    height: 50px;
+    height: 3em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
     position: fixed;
@@ -27,29 +34,38 @@ header{
 }
 
 header a{
-    margin-left: 20px;
+    margin-left: 2rem;
     text-decoration: none;
     color: #666;
-    font-size: 18px;
+    font-size: 0.9rem;
     font-weight: bold;
     transition: color .6s ease;
 }
 
 header a:hover{
-    color: #33b38d;
+    color: var(--primary-colour);
 }
 
 nav{
-    margin-left: 70px;
+    margin-left: 5rem;
+    
+}
+
+.burger_menu{
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
 }
 
 .about{
-    margin-top: 30px;
+    margin-top: 1.5rem;
     display: flex;
 }
 
 .about a{
-    color: #33b38d;
+    color: var(--primary-colour);
     text-decoration: none;
 }
 
@@ -70,26 +86,25 @@ nav{
 }
 
 .name_title{
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 300;
     color: #000;
-    margin-bottom: -20px;
 }
 
 .work{
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 300;
     color: rgba(0,0,0,.54);
 }
 
 .company{
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 300;
 }
 
 .email_icon{
-    width: 45px;
-    height: 45px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .description{
@@ -97,16 +112,16 @@ nav{
 }
 
 .about_me_content{
-    font-size: 20px;
+    font-size: 1.3em;
     text-align: justify;
 }
 
 .graduation_cap_icon, .laptop_icon{
-    font-size: 25px;
+    font-size: 1.3em;
 }
 
 .qualification, .job{
-    font-size: 19px;
+    font-size: 1.1em;
 }
 
 .institution{
@@ -119,11 +134,11 @@ nav{
 
 #skills{
     display: flex;
-    font-size: 16px;
+    font-size: 1.0em;
 }
 
 #skills h2{
-    font-size: 1.35rem;
+    font-size: 1.2em;
 }
 
 .programming_skills, .interpersonal_skills, .language_skills{
@@ -132,36 +147,35 @@ nav{
 
 .form_holder{
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: 2rem;
     border-radius: 10px;
-    padding: 100px;
+    padding: 3rem;
     background-color: #f2f2f2;
 }
 
 form{
-    margin-top: 25px;
-    margin-left: -25px;
+    margin-top: 2rem;
 }
 
 textarea{
-    height: 150px;
+    height: 5rem;
 }
 
 input[type=text], textarea{
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     border:1px solid #ccc;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
     resize: vertical;
     border-radius: 10px;
     box-shadow: 0 0 3px #666;
 }
 
 input[type=submit]{
-    background-color: #33b38d;
+    background-color: var(--primary-colour);
     color: white;
-    padding: 10px 30px;
+    padding: 1rem 2rem;
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -173,30 +187,53 @@ input[type=submit]:hover{
 }
 
 label{
-    font-size: 15px;
+    font-size: 1em;
 }
 
 .form_holder h2{
-    font-size: 30px;
+    font-size: 1.5em;
     text-align: center;
-    margin-top: -70px;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.5em;
+    color: #33b38d;
 }
 
 
-/* Tablets and Phones */
+/* Tablets */
 
 @media screen and (max-width: 768px) {
     header a{
-        margin-left: 2px;
-        font-size: 13px;
+        margin-left: 2rem;
+        font-size: 1em;
     }
 
     nav{
-        margin-left: 10px;
+        position: fixed;
+        margin-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 7rem;
+        left: 2rem;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .burger_menu{
+        display: block;
+    }
+
+    nav.show{
+        transform: translateX(0);
     }
 
     .about{
         flex-direction: column;
+        margin-top: 5rem;
     }
 
     .about p{
@@ -204,14 +241,16 @@ label{
     }
 
     .circular_image{
+        margin-top: 3rem;
         height:10rem;
         width :10rem;
         text-align: center;
     }
 
     .name_title{
+        font-size: 1.7em;
         text-align: center;
-        margin-top: -0.5rem;
+        margin-top: 0.5rem;
     }
 
     .about_me_content{
@@ -225,17 +264,17 @@ label{
     }
 
     .graduation_cap_icon, .laptop_icon{
-        font-size: 15px;
+        font-size: 1em;
     }
 
     .qualification, .job{
-        font-size: 12px;
+        font-size: 1em;
     }
 
     .institution{
-        margin-left: 25px;
-        margin-top: -15px;
-        font-size: 17px;
+        margin-left: 2.5em;
+        margin-top: 1.5em;
+        font-size: 1em;
     }
 
     #skills{
@@ -248,8 +287,45 @@ label{
     }
 
     .form_holder h2{
-        font-size: 20px;
-        margin-top: -70px;
+        font-size: 1em;
+        margin-top: 2rem;
+    }
+}
+
+/* Smaller Phones  */
+@media screen and (max-width: 420px){
+    html{
+        font-size: 0.9em;
+    }
+    
+    nav{
+        font-size: 1em;
+    }
+
+    .circular_image{
+        margin-top: 3rem;
+        height:7rem;
+        width :7rem;
+        text-align: center;
+    }
+    
+    form{
+        margin-top: 0.5rem;
+    }
+    
+    .form_holder{
+        box-sizing: border-box;
+        padding: 3em;
+        background-color: #f2f2f2;
+    }
+
+    .form_holder h2{
+        font-size: 0.9em;
+        margin-top: 0rem;
+    }
+
+    textarea{
+        height: 2rem;
     }
 }
 

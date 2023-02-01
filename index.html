@@ -16,19 +16,22 @@
 <body>
     <header>
         <nav>
-            <a href="#about_me">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="./resources/Motheo_Moiloa_CV.pdf" target="_blank" type="application/pdf" media="print">CV</a>
-            <a href="./contact.html">Contact</a>
+            <a href="#about_me" class="nav_link">About</a>
+            <a href="#education" class="nav_link">Education</a>
+            <a href="#experience" class="nav_link">Experience</a>
+            <a href="#skills" class="nav_link">Skills</a>
+            <a href="./resources/Motheo_Moiloa_CV.pdf" class="nav_link" target="_blank" type="application/pdf" media="print">CV</a>
+            <a href="./contact.html" class="nav_link">Contact</a>
         </nav>
+        <button class="burger_menu" id="burger_menu">
+            <img class="menu_icon" src="./images/hamburger-menu.png" alt="A hamburger menu icon">
+        </button>
     </header>
 
     <section class="about" id="about_me">
         <article class="profile_summary">
             <figure class="centre_text">
-                <img class="circular_image" src="images/me.jpg" alt="A rounded picture of Motheo Moiloa.">
+                <img class="circular_image centre_text" src="images/me.jpg" alt="A rounded picture of Motheo Moiloa.">
             </figure>
 
             <h2 class="centre_text name_title">Motheo Moiloa</h2>
@@ -116,7 +119,13 @@
          
 
     <footer>
-        
+        <input id="tech message" onclick="getData()" type="submit" value="Get Message">
+        <section id="message_display">
+            
+        </section>
     </footer>
+
+    <script src="./js/script.js"></script>
+
 </body>
 </html>
