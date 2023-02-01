@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="/css/calculator.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <script src="./js/calculator.js"></script>
 </head>
 <body>
     <header>
@@ -25,8 +23,31 @@
         </button>
     </header>
 
+    <section class="calculator">
+        <h2>Basic Calculator</h2>
 
+        <section class="calculator_display">0</section>
+        <section class="calculator_keys">
+            <button class="operator" data-action="add">&plus;</button>
+            <button class="operator" data-action="minus">&minus;</button>
+            <button class="operator" data-action="multiply">&#215;</button>
+            <button class="operator" data-action="divide">&divide;</button>
+            <button class="operand">1</button>
+            <button class="operand">2</button>
+            <button class="operand">3</button>
+            <button class="operand">4</button>
+            <button class="operand">5</button>
+            <button class="operand">6</button>
+            <button class="operand">7</button>
+            <button class="operand">8</button>
+            <button class="operand">9</button>
+            <button class="operand">0</button>
+            <button class="decimal" data-action="decimal">.</button>
+            <button class="all_clear" data-action="clear_all">AC</button>
+            <button class="equal" data-action="calculate">&equals;</button>
+        </section>
+    </section>
 
-
+    <script src="./js/calculator.js"></script>
     <script src="./js/script.js"></script>
 </body>
