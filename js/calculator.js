@@ -63,6 +63,15 @@ keys.addEventListener('click', (event) => {
            calculator.dataset.previousKeyType = 'decimal';
         }
 
+        if(data_action === 'opening_bracket'){
+            
+        }
+
+        if(data_action === 'closing_bracket')
+        {
+            
+        }
+
         if(data_action === 'clear_all')
         {
             calculator.dataset.first_number = '';
@@ -116,6 +125,26 @@ let calculate = (number1, operator, number2) =>
         case 'divide' :
             return (parseFloat(number1) / parseFloat(number2));
             break;
+    }
+}
+
+let priority = (operator) =>
+{
+    switch(operator){
+        case 'add' :
+        case 'minus' :
+            return (1);
+            break;
+        case 'multiply' :
+        case 'divide' :
+            return (2);
+            break;
+        case 'opening_bracket' :
+        case 'closing_bracket' :
+            return (3);
+            break;
+        default:
+            return(-1);
     }
 }
 
